@@ -1,0 +1,30 @@
+class MyStack:
+    def __init__(self,list1,variable,position):
+        self.list1 = list1
+        self.variable = variable
+        self.position = position
+    def function_to_push(self):
+        self.list1.append(self.variable)
+        length = len(self.list1)
+        if self.position == length:
+            print('After pushing the new list no operation ', self.list1)
+        elif self.position > length:
+            print('Not possible to push the variable to this position')
+        elif self.position < length:
+            for i in range(length - 1, self.position - 1, -1):
+                temp = self.list1[i]
+                self.list1[i] = self.list1[i - 1]
+                self.list1[i - 1] = temp
+            print('After pushing the new list ', self.list1)
+
+
+input_list = []
+m = int(input('Enter the list length '))
+for i in range(0,m):
+    element_by_user = int(input('Enter the elements one by one '))
+    input_list.append(element_by_user)
+pushing_var = int(input('Enter the variable you want to push '))
+pushing_pos = int(input('Enter the position where you want to push '))
+
+push1 = MyStack(input_list,pushing_var,pushing_pos)
+push1.function_to_push() # calling the function to push the variable using push1
