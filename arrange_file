@@ -1,0 +1,30 @@
+#List Sorting
+def swapping(a,b):
+        temp = b
+        b = a
+        a = temp
+
+def arrange(list1):
+    max_ele = list1[0]
+    for i in range(0,n-1):
+        for j in range(i+1,n):
+            if list1[j] > list1[i]:
+                temp = list1[i]
+                list1[i] = list1[j]
+                list1[j] = temp
+                max_ele = list[i]
+    print('After arranging',list1)
+
+
+n = int(input('Enter the list length '))
+input_list = [19,2,31,45,6,11,121,27]
+#for i in range(0,n):
+    #element = int(input('Enter the elements one by one '))
+   # input_list.append(element)
+
+arrange(input_list)
+
+
+
+
+
