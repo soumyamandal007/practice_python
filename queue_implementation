@@ -1,0 +1,27 @@
+class Queue():
+
+    def __init__(self):
+        self.qlist = []
+
+    def isEmpty(self):
+        return self.qlist == []
+
+    def enqueue(self,item):
+        return self.qlist.insert(0,item)   #as it is a queue FIFO
+
+    def dequeue(self):
+        return self.qlist.pop()
+
+    def size(self):
+        return len(self.qlist)
+
+    def show(self):
+        return self.qlist
+
+q = Queue()
+
+q.enqueue(5)
+q.enqueue('dog')
+print(q.size())
+print(q.show())
+print(q.dequeue())
